@@ -1,0 +1,16 @@
+{
+	"private": true,
+	"scripts": {
+		"build:server": "cd packages/server && yarn build",
+		"build:web": "cd packages/web && yarn build",
+		"heroku-postbuild": "yarn build:server"
+	},
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		]
+	},
+	"devDependencies": {
+		"lerna": "^3.8.5"
+	}
+}

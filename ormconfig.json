@@ -1,0 +1,31 @@
+[
+	{
+		"name": "development",
+		"type": "postgres",
+		"host": "localhost",
+		"port": 5432,
+		"database": "typescript_react",
+		"synchronize": true,
+		"logging": false,
+		"entities": ["src/entity/**/*.*"],
+		"migrations": ["src/migration/**/*.*"],
+		"subscribers": ["src/subscriber/**/*.*"],
+		"cli": {
+			"entitiesDir": "src/entity",
+			"migrationsDir": "src/migration",
+			"subscribersDir": "src/subscriber"
+		}
+	},
+	{
+		"name": "production",
+		"type": "postgres",
+		"host": "db",
+		"port": 5432,
+		"database": "typescript_react",
+		"synchronize": false,
+		"logging": false,
+		"entities": ["dist/entity/**/*.*"],
+		"migrations": ["dist/migration/**/*.*"],
+		"subscribers": ["dist/subscriber/**/*.*"]
+	}
+]
